@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C1 Job Skills 2 - Class 12: Networking at a Job Fair — Posters and Tips</title>
+<style>*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',sans-serif;background:#5B5091;min-height:100vh;padding:20px}
+.container{max-width:860px;margin:0 auto}
+.header,.card{background:#fff;border-radius:18px;padding:28px;margin-bottom:18px}
+.header{text-align:center}
+.header h1{color:#5B5091;font-size:1.55em;margin-bottom:6px}
+.header p{color:#777}
+.section{display:none}.section.active{display:block}
+label{font-weight:600;color:#333;display:block;margin-bottom:8px}
+input[type="text"],select,textarea{width:100%;padding:14px;border:2px solid #e0e0e0;border-radius:12px;font-size:16px;font-family:inherit}
+textarea{min-height:160px;resize:vertical}
+input[type="text"]:focus,select:focus,textarea:focus{outline:none;border-color:#5B5091}
+.btn{background:#5B5091;color:#fff;border:none;padding:14px 28px;border-radius:12px;font-size:16px;font-weight:600;cursor:pointer;width:100%;margin-top:12px}
+.btn:hover{background:#4a4080}.btn-orange{background:#F5A623}
+.progress{height:8px;background:#e0e0e0;border-radius:4px;margin-bottom:18px}
+.progress-bar{height:100%;background:#F5A623;border-radius:4px}
+.reading-box,.question,.feedback,.transcript-box,.tip-box{background:#f8f9fa;border-radius:12px;padding:18px;margin-top:14px;border:1px solid #eee}
+.reading-box{border-left:4px solid #5B5091;line-height:1.7}
+.question h4{margin-bottom:12px;color:#333}
+.option{padding:12px;border:2px solid #e0e0e0;border-radius:10px;cursor:pointer;margin-top:8px;display:flex;gap:10px;align-items:center}
+.option:hover{border-color:#5B5091;background:#f8f6ff}.option.selected{border-color:#5B5091;background:#f0edff}
+.circle{width:18px;height:18px;border:2px solid #ccc;border-radius:50%;flex-shrink:0}
+.option.selected .circle{background:#5B5091;border-color:#5B5091}
+.word-bank{display:flex;flex-wrap:wrap;gap:10px;padding:15px;background:#f5f5f5;border-radius:12px;margin-top:10px}
+.word{background:#fff;padding:10px 14px;border-radius:8px;cursor:pointer;border:2px solid #e0e0e0}
+.word.selected{border-color:#5B5091;background:#f0edff}.word.used{opacity:.4;pointer-events:none}
+.drop-row{display:flex;gap:12px;align-items:center;margin-top:10px}
+.drop-def{flex:1;background:#f8f9fa;padding:12px;border-radius:8px}
+.drop-target{min-width:130px;min-height:44px;border:2px dashed #ccc;border-radius:8px;padding:10px;text-align:center;cursor:pointer}
+.drop-target.filled{border-style:solid;border-color:#5B5091;background:#f8f6ff}
+.record-btn{width:84px;height:84px;border-radius:50%;background:#fff;border:3px solid #5B5091;cursor:pointer;margin:18px auto;display:flex;align-items:center;justify-content:center}
+.record-btn.recording{border-color:#ef4444;animation:pulse 1.4s infinite}
+.record-dot{width:24px;height:24px;background:#5B5091;border-radius:50%}
+.record-btn.recording .record-dot{background:#ef4444;border-radius:4px;width:20px;height:20px}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(239,68,68,.4)}50%{box-shadow:0 0 0 15px rgba(239,68,68,0)}}
+.timer{text-align:center;font-size:28px;font-weight:700;color:#5B5091}
+.status{text-align:center;color:#666;margin-top:8px}
+audio{width:100%;margin-top:14px}.hidden{display:none}
+.score-card{background:linear-gradient(135deg,#5B5091,#7B6DB5);border-radius:20px;padding:35px;color:#fff;text-align:center}
+.score-big{font-size:4em;font-weight:700}
+.scores{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:18px}
+.scores>div{background:rgba(255,255,255,.15);border-radius:12px;padding:10px}
+.scores label{font-size:.75em;color:#fff;opacity:.9}.scores span{font-size:1.3em;font-weight:700;display:block}
+.small{color:#777;margin-top:8px;font-size:14px}
+.note{background:#fff7e8;border:1px solid #f3d796;color:#7a5b00;border-radius:12px;padding:12px;margin-top:12px}
+.tip-box strong{color:#5B5091}
+@media(max-width:700px){.scores{grid-template-columns:repeat(3,1fr)} .drop-row{flex-direction:column;align-items:stretch}}</style>
+</head>
+<body>
+<div class="container">
+<div class="header">
+<h1>C1 Job Skills 2 - Class 12: Networking at a Job Fair — Posters and Tips</h1>
+<p style="color:#888;font-size:0.95em">Week 6 - Networking at a Job Fair - Posters, Networking Tips, and Professional Conversation</p>
+</div>
+<div class="section active" id="start">
+<div class="card">
+<label>Your Full Name</label>
+<input type="text" id="studentName" placeholder="Enter your name...">
+<input type="hidden" id="teacherName" value="">
+<label>Your Class</label>
+<select id="className" style="width:100%;padding:14px;border:2px solid #e0e0e0;border-radius:12px;font-size:16px;margin-bottom:15px" onchange="setTeacher(this)">
+  <option value="">-- Select your class --</option>
+  <optgroup label="Angela Gradiska">
+    <option value="3091" data-teacher="Angela Gradiska">3091 - Mon/Wed 6:30 PM (Angela)</option>
+    <option value="3093" data-teacher="Angela Gradiska">3093 - Tue/Thu 8:30 PM (Angela)</option>
+  </optgroup>
+</select>
+<button class="btn" onclick="startQuiz()">Start Homework &#8594;</button>
+<div class="note">This homework focuses on networking tips, job-fair posters, and professional conversation.</div>
+</div>
+</div>
+
+<div class="section" id="s1">
+<div class="card">
+<div class="progress"><div class="progress-bar" style="width:20%"></div></div>
+<h2>1. Reading</h2>
+<div class="reading-box"><p><strong>How to Network Effectively at a Professional Event</strong></p><p>Networking is one of the most valuable career skills you can develop. At a job fair or professional event, the goal is not simply to collect business cards, but to build genuine connections with people who can help your career grow.</p><p>Preparation is essential. Before the event, research the companies attending and identify two or three you genuinely want to speak with. Prepare a brief, confident introduction and think of two follow-up questions that show curiosity and knowledge about the field.</p><p>During the event, approach each booth with confidence, maintain good eye contact, and listen actively. After the event, send a short, tailored follow-up message within 24 to 48 hours. The most memorable candidates are those who are prepared, engaged, and professional from the first handshake to the final email.</p></div>
+<div id="readingQuestions"></div>
+<button class="btn" onclick="checkS1()">Continue &#8594;</button>
+</div>
+</div>
+<div class="section" id="s2">
+<div class="card">
+<div class="progress"><div class="progress-bar" style="width:40%"></div></div>
+<h2>2. Vocabulary</h2>
+<p class="small">Match each word or phrase to its correct meaning.</p>
+<div class="word-bank" id="wordBank"></div>
+<div id="vocabDrops"></div>
+<button class="btn" onclick="checkS2()">Continue &#8594;</button>
+</div>
+</div>
+<div class="section" id="s3">
+<div class="card">
+<div class="progress"><div class="progress-bar" style="width:60%"></div></div>
+<h2>3. Writing</h2>
+<p class="small"><strong>Posters, Networking Tips, and Professional Conversation:</strong> Write 7–9 sentences explaining how to network effectively at a professional event. Mention preparation, confidence, and at least two follow-up questions.</p>
+<textarea id="writing" placeholder="Example: Networking effectively at a job fair requires preparation and confidence. Before the event, you should research the companies attending and prepare a brief introduction. Two strong follow-up questions you could ask are: What does a typical career path look like here? and What qualities are you looking for in candidates?..."></textarea>
+<p class="small" style="text-align:right">Words: <span id="wc">0</span></p>
+<div class="tip-box"><strong>Grammar tip:</strong> Use a mix of <em>modal verbs</em> for advice (<em>you should, you ought to, you had better</em>) and <em>conditional structures</em> for tips (<em>If you prepare in advance, you will make a stronger impression</em>). Vary your sentence structure to show C1-level range.</div>
+<div id="wFeedback" class="feedback hidden"></div>
+<button class="btn" id="wBtn" onclick="checkWriting()">Get Feedback &#8594;</button>
+<button class="btn hidden" id="wNext" onclick="showSection('s4')">Continue &#8594;</button>
+</div>
+</div>
+<div class="section" id="s4">
+<div class="card">
+<div class="progress"><div class="progress-bar" style="width:80%"></div></div>
+<h2>4. Speaking</h2>
+<p>Speak for 45–60 seconds as if you were advising a classmate before their first networking event. Be specific, confident, and use professional vocabulary.</p>
+<div class="record-btn" id="recBtn" onclick="toggleRec()"><div class="record-dot"></div></div>
+<div class="timer" id="timer">0:00</div>
+<div class="status" id="recStatus">Click to start recording</div>
+<audio id="audio" controls class="hidden"></audio>
+<div id="transcriptBox" class="transcript-box hidden"></div>
+<div id="sFeedback" class="feedback hidden"></div>
+<button class="btn" id="sBtn" onclick="checkSpeaking()">Continue &#8594;</button>
+</div>
+</div>
+<div class="section" id="s5">
+<div class="card">
+<div class="progress"><div class="progress-bar" style="width:100%"></div></div>
+<h2>5. Grammar</h2>
+<div id="grammarQuestions"></div>
+<button class="btn btn-orange" onclick="submitFinal()">Submit Homework &#10003;</button>
+</div>
+</div>
+<div class="section" id="results">
+<div class="score-card">
+<p style="opacity:.85">Homework Complete!</p>
+<div class="score-big" id="finalPct">0%</div>
+<p id="studentDisplay"></p>
+<div class="scores">
+<div><label>Reading</label><span id="scL">0/3</span></div>
+<div><label>Vocab</label><span id="scV">0/6</span></div>
+<div><label>Writing</label><span id="scW">0/20</span></div>
+<div><label>Speaking</label><span id="scS">0/20</span></div>
+<div><label>Grammar</label><span id="scG">0/8</span></div>
+</div>
+<button class="btn btn-orange" style="margin-top:20px" id="submitBtn" onclick="submitToTeacher()">Finish &#8594;</button>
+<div id="submitStatus" style="display:none;margin-top:16px;background:#f0fdf4;border:2px solid #22c55e;border-radius:12px;padding:16px;text-align:center;color:#15803d"></div>
+</div>
+</div>
+</div>
+<script>
+let submitted=false;
+function isRealSpeech(t){if(!t||!t.trim())return false;var w=t.trim().split(' ').filter(Boolean);return w.length>=3;}
+function setTeacher(sel){const opt=sel.options[sel.selectedIndex];document.getElementById('teacherName').value=opt?(opt.getAttribute('data-teacher')||''):''}
+const SESSION='12';
+let name='',scores={l:0,v:0,w:0,s:0,g:0},writingText='',spokenText='';
+let selectedWord=null,isRec=false,recTime=0,recTimer=null,recognition=null;
+let readingAnswers=[],grammarAnswers=[];
+const readingQBank=[{"q": "What is the most important thing to do BEFORE a networking event?", "opts": ["Buy new clothes", "Research the companies and prepare questions", "Arrive as late as possible"], "correct": 1}, {"q": "What does networking effectively mean?", "opts": ["Collecting as many business cards as possible", "Building genuine professional relationships", "Only speaking to senior executives"], "correct": 1}, {"q": "Which is an example of a good follow-up question at a networking event?", "opts": ["How much do you earn?", "What does a typical career path look like in your company?", "When is the interview?"], "correct": 1}, {"q": "Why is confidence important at a job fair?", "opts": ["It helps you demand a higher salary", "It makes you more approachable and memorable to recruiters", "It allows you to skip the application process"], "correct": 1}, {"q": "What is the purpose of a job fair poster?", "opts": ["To advertise the venue", "To attract candidates by highlighting key company info and open roles", "To list the schedule of speakers"], "correct": 1}];
+const vocabPairs=[{"word": "networking", "def": "building professional relationships to advance your career"}, {"word": "approachable", "def": "friendly and easy to talk to"}, {"word": "follow-up question", "def": "a question asked to get more information after an initial answer"}, {"word": "booth", "def": "a company's display table or stand at a job fair"}, {"word": "preparation", "def": "the process of getting ready for something in advance"}, {"word": "impression", "def": "the effect or image you create in someone's mind"}, {"word": "candidate", "def": "a person applying for a job or position"}, {"word": "tailored", "def": "adapted to suit a specific person or situation"}];
+const grammarQBank=[{"q": "Choose the best networking introduction:", "opts": ["Hi, I am interested in jobs.", "Hi, I am Maya. I have five years in marketing and I am exploring opportunities in brand strategy.", "Hi, do you have any jobs?"], "correct": 1}, {"q": "Which follow-up question is most professional?", "opts": ["What is your salary range?", "What qualities do you look for in candidates for this role?", "How many people work here?"], "correct": 1}, {"q": "Choose the most effective closing line at a networking event:", "opts": ["I will call you every day.", "It was great meeting you. May I follow up by email?", "Can I have the job now?"], "correct": 1}, {"q": "Which sentence shows good preparation?", "opts": ["I read about your company's recent expansion into Latin America - I would love to hear more.", "I just arrived and have not had time to look at anything.", "I am not sure what your company does."], "correct": 0}, {"q": "Which phrasal verb fits: I want to _____ the skills needed for this role.", "opts": ["brush up on", "drop out of", "take over"], "correct": 0}, {"q": "Choose the correct sentence:", "opts": ["She came across as confident and well-prepared.", "She came confident across as and well-prepared.", "She as confident came across."], "correct": 0}, {"q": "Which is the best response when a recruiter asks Tell me about yourself?", "opts": ["I am a student.", "I am a bilingual professional with experience in logistics. I am excited about your company's growth in emerging markets.", "I do not know what to say."], "correct": 1}, {"q": "Which phrasal verb means to meet someone unexpectedly or find something by chance?", "opts": ["come across", "take on", "hand in"], "correct": 0}];
+function shuffle(arr){for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]];}return arr;}
+function showSection(id){document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo(0,0);}
+function startQuiz(){
+  name=document.getElementById('studentName').value.trim();
+  if(!name){alert('Please enter your name');return;}
+  if(!document.getElementById('className').value){alert('Please select your class');return;}
+  setTeacher(document.getElementById('className'));
+  try{initQuestions();}catch(e){console.log('initQ err:',e);}showSection('s1');
+}
+function sel(el){el.parentElement.querySelectorAll('.option').forEach(o=>o.classList.remove('selected'));el.classList.add('selected');}
+function initQuestions(){
+  const rQs=shuffle([...readingQBank]).slice(0,3);let rHTML='';
+  rQs.forEach((q,i)=>{const opts=q.opts.map((t,idx)=>(({text:t,isCorrect:idx===q.correct})));shuffle(opts);readingAnswers[i]=opts.findIndex(o=>o.isCorrect);rHTML+=`<div class="question"><h4>${i+1}. ${q.q}</h4>`;opts.forEach((opt,j)=>rHTML+=`<div class="option" onclick="sel(this)" data-v="${j}"><div class="circle"></div>${opt.text}</div>`);rHTML+='</div>';});
+  document.getElementById('readingQuestions').innerHTML=rHTML;
+  let bankHTML='',dropHTML='';const pairs=shuffle([...vocabPairs]).slice(0,6);const words=shuffle(pairs.map(p=>p.word));
+  words.forEach(w=>bankHTML+=`<div class="word" onclick="pickWord(this)">${w}</div>`);
+  pairs.forEach(p=>dropHTML+=`<div class="drop-row"><div class="drop-def">${p.def}</div><div class="drop-target" data-a="${p.word}" onclick="dropWord(this)"></div></div>`);
+  document.getElementById('wordBank').innerHTML=bankHTML;document.getElementById('vocabDrops').innerHTML=dropHTML;
+  const gQs=shuffle([...grammarQBank]).slice(0,8);let gHTML='';
+  gQs.forEach((q,i)=>{const opts=q.opts.map((t,idx)=>(({text:t,isCorrect:idx===q.correct})));shuffle(opts);grammarAnswers[i]=opts.findIndex(o=>o.isCorrect);gHTML+=`<div class="question" data-c="${grammarAnswers[i]}"><h4>${i+1}. ${q.q}</h4>`;opts.forEach((opt,j)=>gHTML+=`<div class="option" onclick="sel(this)" data-v="${j}"><div class="circle"></div>${opt.text}</div>`);gHTML+='</div>';});
+  document.getElementById('grammarQuestions').innerHTML=gHTML;
+}
+function checkS1(){try{let c=0;document.querySelectorAll('#readingQuestions .question').forEach((q,i)=>{const s=q.querySelector('.option.selected');if(s&&parseInt(s.dataset.v)===readingAnswers[i])c++;});scores.l=c;}catch(e){}finally{showSection('s2');}}
+function pickWord(el){document.querySelectorAll('.word').forEach(w=>w.classList.remove('selected'));el.classList.add('selected');selectedWord=el;}
+function dropWord(target){if(!selectedWord||target.classList.contains('filled'))return;target.textContent=selectedWord.textContent;target.classList.add('filled');selectedWord.classList.add('used');selectedWord.classList.remove('selected');selectedWord=null;}
+function checkS2(){try{let c=0;document.querySelectorAll('.drop-target').forEach(t=>{if(t.textContent===t.dataset.a)c++;});scores.v=c;}catch(e){}finally{showSection('s3');}}
+document.addEventListener('DOMContentLoaded',function(){var we=document.getElementById('writing');if(we)we.addEventListener('input',function(){var wc=document.getElementById('wc');if(wc)wc.textContent=this.value.trim().split(' ').filter(Boolean).length;});});
+function checkWriting(){
+  writingText=document.getElementById('writing').value;
+  const text=writingText.toLowerCase();
+  const words=text.trim().split(/\s+/).filter(Boolean);
+  const wordCount=words.length;
+  let score=0;
+  const netWords=['network','preparation','confidence','follow-up','follow up','question','research','approach','impression','tailored','booth','candidate','professional','introduce','contact'];
+  score+=Math.min(10,netWords.filter(x=>text.includes(x)).length*2);
+  const hasQ=(text.match(/\?/g)||[]).length;
+  if(hasQ>=2) score+=4; else if(hasQ>=1) score+=2;
+  if(wordCount>=60) score+=4; else if(wordCount>=40) score+=2;
+  if(score>20) score=20;
+  scores.w=Math.min(20,Math.max(0,Math.round(score)));
+  document.getElementById('wFeedback').innerHTML='<b>Score: '+scores.w+'/20</b><br>Speaking is scored on giving clear, specific networking advice using professional vocabulary.';
+  document.getElementById('wFeedback').classList.remove('hidden');
+  document.getElementById('wBtn').classList.add('hidden');
+  document.getElementById('wNext').classList.remove('hidden');
+}
+function toggleRec(){if(!isRec) startRec(); else stopRec();}
+function startRec(){
+  var SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  if(!SR){alert('Speech recognition not supported. Please use Chrome or Safari.');return;}
+  spokenText='';
+  var box=document.getElementById('transcriptBox');
+  if(box){box.textContent='Listening...';box.style.display='block';box.style.visibility='visible';box.classList.remove('hidden');}
+  isRec=true;recTime=0;
+  document.getElementById('recBtn').classList.add('recording');
+  document.getElementById('recStatus').textContent='Recording... Click again to stop';
+  recTimer=setInterval(function(){recTime++;document.getElementById('timer').textContent=Math.floor(recTime/60)+':'+String(recTime%60).padStart(2,'0');},1000);
+  recognition=new SR();
+  recognition.continuous=false;recognition.interimResults=true;recognition.lang='en-US';
+  recognition.onstart=function(){document.getElementById('recStatus').textContent='Microphone active — speak now';};
+  recognition.onresult=function(e){
+    var interim='';
+    for(var i=e.resultIndex;i<e.results.length;i++){
+      if(e.results[i].isFinal)spokenText+=e.results[i][0].transcript+' ';
+      else interim+=e.results[i][0].transcript;
+    }
+    var tb=document.getElementById('transcriptBox');
+    if(tb){tb.textContent=(spokenText+interim).trim()||'Listening...';tb.style.display='block';tb.style.visibility='visible';tb.classList.remove('hidden');}
+  };
+  recognition.onerror=function(e){
+    var st=document.getElementById('recStatus');
+    if(e.error==='not-allowed'||e.error==='permission-denied'){
+      if(st)st.textContent='Microphone blocked — allow access in your browser and try again.';
+      isRec=false;clearInterval(recTimer);document.getElementById('recBtn').classList.remove('recording');
+    } else {if(st)st.textContent='Error: '+e.error+' — tap to try again';}
+  };
+  recognition.onend=function(){if(isRec){try{recognition.start();}catch(err){}}};
+  try{recognition.start();}catch(e){
+    document.getElementById('recStatus').textContent='Could not start: '+e.message;
+    isRec=false;clearInterval(recTimer);
+  }
+}
+function stopRec(){
+  isRec=false;clearInterval(recTimer);
+  if(recognition){try{recognition.stop();}catch(e){} recognition=null;}
+  document.getElementById('recBtn').classList.remove('recording');
+  document.getElementById('recStatus').textContent='Recording saved!';
+  document.getElementById('sBtn').disabled=false;
+}
+
+function checkSpeaking(){
+  var text=spokenText.toLowerCase();
+  var score=recTime>=12?8:recTime>=7?5:2;
+  var items=["network", "prepare", "research", "confidence", "confident", "follow up", "follow-up", "question", "introduction", "introduce", "impression", "approach", "booth", "professional", "tailored", "company", "recruiter", "career"];
+  score+=Math.min(6,items.filter(function(x){return text.includes(x);}).length)*2;
+  scores.s=Math.min(20,score);
+  document.getElementById('sFeedback').innerHTML='<b>Score: '+scores.s+'/20</b><br>Speaking is scored on coherence, use of relevant vocabulary, and length.';
+  document.getElementById('sFeedback').classList.remove('hidden');
+  showSection('s5');
+}
+
+function submitFinal(){let c=0;document.querySelectorAll('#grammarQuestions .question').forEach((q,i)=>{const s=q.querySelector('.option.selected');const a=parseInt(q.dataset.c);if(s&&parseInt(s.dataset.v)===a)c++;});scores.g=c;const total=scores.l+scores.v+scores.w+scores.s+scores.g;const pct=Math.round(total/57*100);document.getElementById('finalPct').textContent=pct+'%';document.getElementById('studentDisplay').textContent=name;document.getElementById('scL').textContent=scores.l+'/3';document.getElementById('scV').textContent=scores.v+'/6';document.getElementById('scW').textContent=scores.w+'/20';document.getElementById('scS').textContent=scores.s+'/20';document.getElementById('scG').textContent=scores.g+'/8';showSection('results');}
+function submitToTeacher(){
+  if(submitted)return;submitted=true;
+  var btn=document.getElementById('submitBtn')||document.querySelector('.btn-orange');
+  if(btn){btn.disabled=true;btn.textContent='Submitting...';}
+  var total=scores.l+scores.v+scores.w+scores.s+scores.g;
+  var formData=new FormData();
+  formData.append('entry.154629934',name);
+  formData.append('entry.771629595',document.getElementById('className')?document.getElementById('className').value:'');
+  formData.append('entry.1564061356','12');
+  formData.append('entry.1994438750',scores.l+'/3');
+  formData.append('entry.1169985852',scores.v+'/6');
+  formData.append('entry.66378887',scores.w+'/20');
+  formData.append('entry.665897330',scores.s+'/20');
+  formData.append('entry.1528226896',scores.g+'/8');
+  formData.append('entry.543147037',Math.round(total/57*100)+'%');
+  formData.append('entry.301386877',writingText||'');
+  formData.append('entry.1035810181',spokenText||'No transcript captured');
+  formData.append('entry.1451249480',document.getElementById('teacherName')?document.getElementById('teacherName').value:'Angela Gradiska');
+  fetch('https://docs.google.com/forms/d/e/1FAIpQLSdrVV8m2p8QcgXK-ifK2H6By1kwAdcPm-Yp5SyB6DBgfOTiGw/formResponse',{method:'POST',mode:'no-cors',body:formData})
+    .then(function(){if(btn){btn.textContent='Submitted!';btn.style.background='#22c55e';}var st=document.getElementById('submitStatus');if(st){st.textContent='Homework submitted! Your teacher received your work.';st.style.display='block';st.style.color='#15803d';}})
+    .catch(function(){submitted=false;if(btn){btn.disabled=false;btn.textContent='Failed - Tap to Retry';btn.style.background='#ef4444';}});
+}
+
+</script>
+</body>
+</html>
