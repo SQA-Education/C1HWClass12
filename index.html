@@ -150,7 +150,7 @@ let submitted=false;
 function isRealSpeech(t){if(!t||!t.trim())return false;var w=t.trim().split(' ').filter(Boolean);return w.length>=3;}
 function setTeacher(sel){const opt=sel.options[sel.selectedIndex];document.getElementById('teacherName').value=opt?(opt.getAttribute('data-teacher')||''):''}
 const SESSION='12';
-let name='',scores={l:0,v:0,w:0,s:0,g:0},writingText='',spokenText='';
+let name='',scores={l:0,v:0,w:0,s:0,g:0},writingText='',spokenText='';try{window.scores=scores;}catch(e){}
 let selectedWord=null,isRec=false,recTime=0,recTimer=null,recognition=null;
 let readingAnswers=[],grammarAnswers=[];
 const readingQBank=[{"q": "What is the most important thing to do BEFORE a networking event?", "opts": ["Buy new clothes", "Research the companies and prepare questions", "Arrive as late as possible"], "correct": 1}, {"q": "What does networking effectively mean?", "opts": ["Collecting as many business cards as possible", "Building genuine professional relationships", "Only speaking to senior executives"], "correct": 1}, {"q": "Which is an example of a good follow-up question at a networking event?", "opts": ["How much do you earn?", "What does a typical career path look like in your company?", "When is the interview?"], "correct": 1}, {"q": "Why is confidence important at a job fair?", "opts": ["It helps you demand a higher salary", "It makes you more approachable and memorable to recruiters", "It allows you to skip the application process"], "correct": 1}, {"q": "What is the purpose of a job fair poster?", "opts": ["To advertise the venue", "To attract candidates by highlighting key company info and open roles", "To list the schedule of speakers"], "correct": 1}];
@@ -436,7 +436,7 @@ try{
     document.body.appendChild(bar);
     document.getElementById('sqa-fresh').onclick=function(){localStorage.removeItem(KEY);bar.remove();};
     document.getElementById('sqa-resume').onclick=function(){try{
-      for(var k in st.g){try{window[k]=st.g[k];}catch(e){}}
+      for(var k in st.g){try{if(window[k]&&typeof window[k]==='object'&&st.g[k]&&typeof st.g[k]==='object'&&!Array.isArray(window[k])){for(var kk in st.g[k])window[k][kk]=st.g[k][kk];}else{window[k]=st.g[k];}}catch(e){}}
       for(var id in st.h){var el=document.getElementById(id);if(el)el.innerHTML=st.h[id];}
       var fs=fields();(st.f||[]).forEach(function(v,i){if(fs[i]!==undefined){try{fs[i].value=v;}catch(e){}}});
       var wc=document.getElementById('wc'),wr=document.getElementById('writing');if(wc&&wr)try{wc.textContent=wr.value.trim().split(/\s+/).filter(Boolean).length;}catch(e){}
