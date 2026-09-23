@@ -215,12 +215,10 @@ function startRec(){
   recognition=new SR();
   recognition.continuous=false;recognition.interimResults=true;recognition.lang='en-US';
   recognition.onstart=function(){document.getElementById('recStatus').textContent='Microphone active — speak now';};
-  recognition.onresult=function(e){
+  recognitionvar __committed=(typeof spokenText!=='undefined'?spokenText:'')||'';
+.onresult=function(e){
     var interim='';
-    for(var i=e.resultIndex;i<e.results.length;i++){
-      if(e.results[i].isFinal)spokenText+=e.results[i][0].transcript+' ';
-      else interim+=e.results[i][0].transcript;
-    }
+    var __f='';for(var i=0;i<e.results.length;i++){if(e.results[i].isFinal)__f+=e.results[i][0].transcript+' ';else interim+=e.results[i][0].transcript+' ';}spokenText=(__committed+' '+__f).replace(/\s+/g,' ').trim();
     var tb=document.getElementById('transcriptBox');
     if(tb){tb.textContent=(spokenText+interim).trim()||'Listening...';tb.style.display='block';tb.style.visibility='visible';tb.classList.remove('hidden');}
   };
@@ -231,7 +229,7 @@ function startRec(){
       isRec=false;clearInterval(recTimer);document.getElementById('recBtn').classList.remove('recording');
     } else {if(st)st.textContent='Error: '+e.error+' — tap to try again';}
   };
-  recognition.onend=function(){if(isRec){try{recognition.start();}catch(err){}}};
+  recognition.onend=function(){__committed=spokenText;if(isRec){try{recognition.start();}catch(err){}}};
   try{recognition.start();}catch(e){
     document.getElementById('recStatus').textContent='Could not start: '+e.message;
     isRec=false;clearInterval(recTimer);
